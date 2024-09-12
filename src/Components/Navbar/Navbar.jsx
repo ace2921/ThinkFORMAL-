@@ -16,10 +16,10 @@ const Navbar = () => {
         <h4>ThinkFORMAL!</h4>
       </div>
       <ul className="nav-menu">
-        <li>Home <hr /></li>
-        <li>Catalogue</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
+        <li onClick={()=> {setMenu("home")}}>Home{menu==="home"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("catalogue")}}>Catalogue{menu==="catalogue"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("about")}}>About Us{menu==="about"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("contact")}}>Contact Us{menu==="contact"?<hr/>:<></>}</li>
       </ul>
       <div className="nav-login-cart">
         <button>Login</button>
