@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../Assets/OIG1.jpeg'
 import cart_icon from '../Assets/shopping-cart.png'
 import person_icon from '../Assets/account.png'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -16,15 +17,15 @@ const Navbar = () => {
         <h4>ThinkFORMAL!</h4>
       </div>
       <ul className="nav-menu">
-        <li onClick={()=> {setMenu("home")}}>Home{menu==="home"?<hr/>:<></>}</li>
-        <li onClick={()=> {setMenu("catalogue")}}>Catalogue{menu==="catalogue"?<hr/>:<></>}</li>
-        <li onClick={()=> {setMenu("about")}}>About Us{menu==="about"?<hr/>:<></>}</li>
-        <li onClick={()=> {setMenu("contact")}}>Contact Us{menu==="contact"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("home")}}><Link to='/'>Home</Link>{menu==="home"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("catalogue")}}><Link to='/catalogue'>Catalogue</Link>{menu==="catalogue"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("about")}}><Link to='/about'>About Us</Link>{menu==="about"?<hr/>:<></>}</li>
+        <li onClick={()=> {setMenu("contact")}}><Link to='/contact'>Contact Us</Link>{menu==="contact"?<hr/>:<></>}</li>
       </ul>
       <div className="nav-login-cart">
-        <button>Login</button>
+        <Link to='/login'><button>Login</button></Link>
         <img src={person_icon} alt="" />
-        <img src={cart_icon} alt="" />
+        <Link to='/cart'><img src={cart_icon} alt="" /></Link>
         <div className="navbar-cart-counter">0</div>
       </div>
     </div>
