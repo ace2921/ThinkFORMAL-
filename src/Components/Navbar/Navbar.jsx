@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../Assets/OIG1.jpeg'
 import cart_icon from '../Assets/shopping-cart.png'
-import person_icon from '../Assets/account.png'
 import { Link } from 'react-router-dom'
 
 
@@ -24,7 +23,6 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-cart">
         <Link to='/login'><button>Login</button></Link>
-        <img src={person_icon} alt="" />
         <Link to='/cart'><img src={cart_icon} alt="" /></Link>
         <div className="navbar-cart-counter">0</div>
       </div>

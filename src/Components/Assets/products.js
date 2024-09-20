@@ -20,7 +20,7 @@ let data_product = [
         old_price: 185.50
     },
     {
-        id: 2,
+        id: 3,
         name:"Emperio Women",
         image:p3_img,
         new_price:160.00,

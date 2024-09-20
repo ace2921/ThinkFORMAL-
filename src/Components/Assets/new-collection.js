@@ -5,21 +5,21 @@ import new_collection3 from  './new-collection3.webp'
 
 let newCollection = [
     {
-        id: 1,
+        id: 14,
         name:"A Gentleman's Garment",
         image:new_collection1,
         new_price:195.00,
         old_price: 215.50
     },
     {
-        id: 2,
+        id: 15,
         name:"Vintage Powerhouse",
         image:new_collection2,
         new_price:210.00,
         old_price: 225.50
     },
     {
-        id: 3,
+        id: 16,
         name:"Dapper Women",
         image:new_collection3,
         new_price:180.00,
