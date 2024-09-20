@@ -1,48 +1,130 @@
-.offers{
-    width: 65%;
-    height: 60vh;
+.offers {
+    width: 90%; /* Adjusted width for better fit on larger screens */
+    max-width: 1200px; /* Maximum width to prevent too much stretching */
+    height: auto; /* Adjusted height for responsiveness */
     display: flex;
+    flex-direction: row; /* Default row layout for large screens */
     margin: auto;
-    padding: 0px 140px;
-    margin-top: 350px;
-    
+    padding: 20px; /* Reduced padding */
+    margin-top: 200px; /* Reduced top margin */
+    gap: 20px; /* Added gap between left and right content */
 }
-.offers img{
-    height: 550px;
 
+.offers img {
+    max-width: 100%; /* Responsive image scaling */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers its container */
 }
-.offers-left{
+
+.offers-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px; /* Added padding for spacing */
 }
-.offers-left h1{
+
+.offers-left h1 {
     color: #171717;
-    font-size: 65px;
+    font-size: 50px; /* Reduced font size */
     font-weight: 600;
 }
-.offers-left p{
+
+.offers-left p {
     color: #171717;
-    font-size: 22px;
+    font-size: 20px; /* Reduced font size */
     font-weight: 600;
+    line-height: 1.4; /* Added line-height for readability */
 }
-.offers-left button{
-    height: 50px;
-    width: 282px;
-    border-radius: 35px;
+
+.offers-left button {
+    height: 45px; /* Reduced button height */
+    width: 250px; /* Reduced button width */
+    border-radius: 30px; /* Adjusted border-radius */
     border: none;
     background: rgb(141, 140, 140);
     color: #ffffff;
-    font-size: 22px;
+    font-size: 20px; /* Reduced font size */
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 20px; /* Reduced margin-top */
     cursor: pointer;
 }
-.offers-right{
+
+.offers-right {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-top: 25px;
+    justify-content: center; /* Center the image in its container */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .offers {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content */
+        margin-top: 150px; /* Adjust top margin */
+        gap: 40px; /* Increase gap between sections */
+    }
+
+    .offers-left h1 {
+        font-size: 40px; /* Reduce font size */
+    }
+
+    .offers-left p {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .offers-left button {
+        width: 200px; /* Adjust button width */
+        font-size: 18px; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        width: 100%; /* Full width for small screens */
+        padding: 10px; /* Reduce padding */
+        margin-top: 100px; /* Further reduce top margin */
+    }
+
+    .offers-left {
+        padding: 10px; /* Reduce padding for mobile */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .offers-left h1 {
+        font-size: 32px; /* Further reduce font size */
+    }
+
+    .offers-left p {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .offers-left button {
+        width: 180px; /* Further reduce button width */
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .offers-right {
+        justify-content: center; /* Center image on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .offers-left h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    .offers-left p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .offers-left button {
+        width: 160px; /* Further reduce button width */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .offers img {
+        max-width: 80%; /* Reduce image size */
+    }
 }

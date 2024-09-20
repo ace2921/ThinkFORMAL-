@@ -1,23 +1,61 @@
-.popular{
+.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    height: auto; /* Adjust height to be flexible */
+    padding: 20px; /* Add some padding */
 }
-.popular h1{
+
+.popular h1 {
     color: #171717;
-    font-size: 50px;
+    font-size: 50px; /* Base font size */
     font-weight: 600;
+    text-align: center; /* Center text */
 }
-.popular hr{
-    width: 200px;
+
+.popular hr {
+    width: 200px; /* Base width */
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
-.popular-item{
+
+.popular-item {
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     gap: 30px;
+    justify-content: center; /* Center items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 36px; /* Smaller font size for tablets */
+    }
+
+    .popular hr {
+        width: 150px; /* Reduced width for smaller screens */
+    }
+
+    .popular-item {
+        margin-top: 30px; /* Adjusted margin */
+        gap: 20px; /* Reduced gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    .popular hr {
+        width: 100px; /* Further reduced width */
+    }
+
+    .popular-item {
+        margin-top: 20px; /* Further adjusted margin */
+        gap: 15px; /* Further reduced gap */
+    }
 }

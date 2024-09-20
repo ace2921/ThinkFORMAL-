@@ -1,40 +1,74 @@
 .cart-page-cart {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the cart */
     padding: 20px;
-  }
+    width: 90%; /* Use more width on smaller screens */
+}
 
-  
-  .cart-item {
+.cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .cart-item-image {
-    width: 100px;
-    height: 100px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.cart-item-image {
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
     object-fit: cover;
     margin-right: 20px;
-  }
-  
-  .cart-item-details {
-    flex: 1;
-  }
-  
-  .remove-item-button {
+}
+
+.cart-item-details {
+    flex: 1; /* Take remaining space */
+    min-width: 0; /* Prevent overflow */
+}
+
+.remove-item-button {
     margin-top: 10px;
     background-color: red;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-  }
-  
-  .cart-total {
+}
+
+.cart-total {
     margin-top: 30px;
     text-align: right;
     font-size: 1.5em;
     font-weight: bold;
-  }
-  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column; /* Stack item details vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .cart-item-image {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add space below the image */
+    }
+
+    .cart-total {
+        text-align: left; /* Align total text to the left */
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item-image {
+        width: 80px; /* Smaller image size for mobile */
+        height: 80px; /* Smaller image size for mobile */
+    }
+
+    .cart-total {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .remove-item-button {
+        padding: 8px 12px; /* Larger padding for touch targets */
+        font-size: 16px; /* Adjust button font size */
+    }
+}

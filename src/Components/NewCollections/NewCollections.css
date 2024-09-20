@@ -1,25 +1,86 @@
-.new-collections{
+
+Copy code
+.new-collections {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
-    margin-top: 200px;
+    height: auto; /* Changed from 90vh to auto for better adaptability */
+    margin-top: 100px; /* Adjusted margin-top for better appearance on smaller screens */
+    padding: 20px; /* Add padding for spacing on small screens */
 }
-.new-collections h1{
+
+.new-collections h1 {
     color: #171717;
-    font-size: 50px;
+    font-size: 40px; /* Reduced font size for better readability on smaller screens */
     font-weight: 600;
+    text-align: center; /* Center the text for better alignment */
 }
-.new-collections hr{
-    width: 200px;
-    height: 6px;
+
+.new-collections hr {
+    width: 150px; /* Reduced width */
+    height: 4px; /* Reduced height */
     border-radius: 10px;
     background: #252525;
 }
-.collecions{
+
+.collections {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns layout for large screens */
     margin-top: 50px;
     gap: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns layout for medium screens */
+        gap: 20px; /* Reduce gap between items */
+    }
+
+    .new-collections h1 {
+        font-size: 36px; /* Adjust font size */
+    }
+
+    .new-collections hr {
+        width: 120px; /* Adjust hr width */
+        height: 3px; /* Adjust hr height */
+    }
+}
+
+@media (max-width: 768px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for tablet screens */
+        gap: 15px; /* Further reduce gap */
+    }
+
+    .new-collections h1 {
+        font-size: 32px; /* Adjust font size */
+    }
+
+    .new-collections hr {
+        width: 100px; /* Adjust hr width */
+        height: 3px; /* Adjust hr height */
+    }
+}
+
+@media (max-width: 480px) {
+    .collections {
+        grid-template-columns: 1fr; /* Single column layout for mobile screens */
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .new-collections {
+        margin-top: 50px; /* Reduce top margin */
+        padding: 10px; /* Additional padding for mobile */
+    }
+
+    .new-collections h1 {
+        font-size: 28px; /* Further reduce font size */
+    }
+
+    .new-collections hr {
+        width: 80px; /* Further reduce hr width */
+        height: 2px; /* Further reduce hr height */
+    }
 }

@@ -1,28 +1,67 @@
-.descriptionbox{
-    margin: 120px 170px;
+.descriptionbox {
+    margin: 120px 170px; /* Large margins for larger screens */
 }
-.descriptionbox-navigator{
+
+.descriptionbox-navigator {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-.description-nav-box{
+
+.description-nav-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 16px; /* Base font size */
     font-weight: 600;
-    width: 171px;
-    height: 70px;
+    width: 171px; /* Fixed width */
+    height: 70px; /* Fixed height */
     border: 1px solid #D0D0D0;
+    margin: 5px; /* Add some margin between boxes */
 }
-.description-nav-box.fade{
+
+.description-nav-box.fade {
     background: #FBFBFB;
     color: #555;
 }
-.descriptionbox-description{
+
+.descriptionbox-description {
     display: flex;
     flex-direction: column;
     gap: 25px;
     border: 1px solid #D0D0D0;
     padding: 48px;
     padding-bottom: 70px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .descriptionbox {
+        margin: 80px 20px; /* Reduced margins for tablets */
+    }
+
+    .description-nav-box {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height for better fitting */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .descriptionbox-description {
+        padding: 24px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .descriptionbox {
+        margin: 60px 10px; /* Further reduced margins for mobile */
+    }
+
+    .description-nav-box {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 10px; /* Added padding for better touch targets */
+    }
+
+    .descriptionbox-description {
+        padding: 16px; /* Further reduced padding */
+        gap: 20px; /* Reduced gap between elements */
+    }
 }
