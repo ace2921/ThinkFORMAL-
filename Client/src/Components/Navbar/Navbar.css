@@ -1,0 +1,135 @@
+/* Main Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Changed from space-around to space-between */
+    align-items: center; /* Align items vertically centered */
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px #000;
+    background-color: #fff; /* Add background color if needed */
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo h4 {
+    font-weight: 500;
+    font-size: 24px; /* Reduced font size */
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px; /* Reduced gap */
+    color: #626262;
+    font-size: 18px; /* Reduced font size */
+    font-weight: 500;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr {
+    width: 80%;
+    border: none;
+    height: 3px;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* Login & Cart */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Reduced gap */
+}
+
+.nav-login-cart button {
+    width: 80px; /* Reduced button width */
+    height: 40px; /* Reduced button height */
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    font-size: 16px; /* Reduced font size */
+    cursor: pointer;
+}
+
+.nav-login-cart button:active {
+    background: #9b9393;
+}
+
+.navbar-cart-counter {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: -30px;
+    border-radius: 11px;
+    font-size: 14px;
+    color: #ffffff;
+    background: red;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px;
+    }
+
+    .nav-logo h4 {
+        font-size: 20px; /* Further reduced font size */
+    }
+
+    .nav-menu {
+        display: none; /* Hide the menu */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Position it below the navbar */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu li {
+        padding: 10px 20px; /* Add padding to each menu item */
+        width: 100%;
+        text-align: left; /* Align text to the left */
+    }
+
+    .nav-login-cart {
+        display: none; /* Hide login and cart on small screens */
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .nav-logo h4 {
+        font-size: 18px; /* Further reduce font size */
+    }
+
+    .nav-menu {
+        gap: 5px; /* Further reduce gap between menu items */
+    }
+
+    .nav-menu li {
+        font-size: 16px; /* Further reduce font size */
+    }
+}
