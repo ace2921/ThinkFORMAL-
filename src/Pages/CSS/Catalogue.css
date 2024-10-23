@@ -1,0 +1,23 @@
+.catalogue-banner{
+    display: block;
+    margin: 32px auto;
+    width: 82%;
+}
+.catalogue-indexSort{
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+.catalogue-indexSort p span{
+    font-weight: 600;
+}
+.catalogue-products{
+    margin: 20px 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 120px;
+}
+.catalogue-products img{
+    height: 250px;
+}
