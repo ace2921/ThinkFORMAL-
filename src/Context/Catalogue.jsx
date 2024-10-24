@@ -1,38 +1,19 @@
-import React, { createContext, useState } from "react";
-import allProduct from "../Components/Assets/all_products";
+import React, { createContext, useState } from 'react';
 
-export const CatalogueContext = createContext(null);
-const getDefaultCart = () => {
-    let cart = {};
-    for (let i = 0; i < allProduct.length+1; i++) {
-        cart[1] = 0;
-    }
-    return cart;
-}
+export const CatalogueContext = createContext();
 
+const CatalogueProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
+  const addToCart = (productId) => {
+    setCart((prevCart) => [...prevCart, productId]);
+  };
 
-const CatalogueContextProvider = (props) =>{
+  return (
+    <CatalogueContext.Provider value={{ cart, addToCart }}>
+      {children}
+    </CatalogueContext.Provider>
+  );
+};
 
-
-    const [cartItems,setCartItems] = useState(getDefaultCart())
-    
-    
-    const addToCart = (itemId) => {
-        setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
-        
-    }
-    const removeFromCart = (itemId) => {
-        setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
-    }
-
-
-    const contextValue = {allProduct,cartItems,addToCart,removeFromCart}
-    return (
-        <CatalogueContext.Provider value={contextValue}>
-            {props.children}
-        </CatalogueContext.Provider>
-    )
-}
-
-export default CatalogueContextProvider;
+export default CatalogueProvider;
