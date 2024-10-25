@@ -61,7 +61,7 @@ const LoginSignup = () => {
          const handleSubmit = async (e) => {
            e.preventDefault();
            try {
-             const response = await fetch('http://localhost:9000/signup', { // Ensure port matches backend
+             const response = await fetch('http://35.175.253.228:8000/signup', { // Ensure port matches backend
                method: 'POST',
                headers: {
                  'Content-Type': 'application/json',
