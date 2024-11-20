@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="nav-logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="" id="logo" />
         <h4>ThinkFORMAL!</h4>
       </div>
      
@@ -31,7 +31,7 @@ const Navbar = () => {
         <li onClick={()=> {setMenu("contact")}}><Link style={{textDecoration: 'none'}} to='/contact'>Contact Us</Link>{menu==="contact"?<hr/>:<></>}</li>
       </ul>
       <div className="nav-login-cart">
-        <Link to='/login'><button>Login</button></Link>
+        <Link to='/signup'><button>Login</button></Link>
         <Link to='/cart'><img src={cart_icon} alt="" /></Link>
         <div className="navbar-cart-counter">0</div>
       </div>

@@ -4,11 +4,13 @@ import Popular from '../Components/Popular/Popular'
 import Offers from '../Components/Offers/Offers'
 import NewCollections from '../Components/NewCollections/NewCollections'
 import Newsletter from '../Components/Newsletter/Newsletter'
+import Navbar from '../Components/Navbar/Navbar'
 
 
 const Home = () => {
   return (
     <div>
+      <Navbar/>
       <Hero/>
       <Popular/>
       <Offers/>
