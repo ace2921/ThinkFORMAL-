@@ -18,7 +18,7 @@ const Footer = () => {
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icons-container">
-            <img src="" alt="" />
+            
         </div>
       </div>
     </div>
