@@ -1,5 +1,6 @@
 .cart-page-cart {
     max-width: 800px; /* Maximum width for larger screens */
+    margin-top: 100px;
     margin: 0 auto; /* Center the cart */
     padding: 20px;
     width: 90%; /* Use more width on smaller screens */
@@ -13,8 +14,9 @@
 }
 
 .cart-item-image {
-    width: 100px; /* Fixed width for images */
-    height: 100px; /* Fixed height for images */
+    margin-top: 30px;
+    width: 25%; /* Fixed width for images */
+    height: 20%; /* Fixed height for images */
     object-fit: cover;
     margin-right: 20px;
 }

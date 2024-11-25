@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './CSS/Catalogue.css'
 import { CatalogueContext } from '../Context/Catalogue' 
 import Items from '../Components/Items/Items'
-import hero_image from '../../src/Components/Assets/banner.jpeg'
+import catalog_banner from "../Components/Assets/catalog.jpeg";
 import Navbar from '../Components/Navbar/Navbar'
 
 const Catalogue = (props) => {
@@ -11,7 +11,7 @@ const Catalogue = (props) => {
       
   <div className='catalogue'>
     <Navbar/>
-        <img src={hero_image} alt="" id='banner' />
+        <img src={catalog_banner} alt="" id='banner' />
       <div className="catalogue-indexSort">
         <p>
           <span>Showing All 13 products</span> 
