@@ -20,6 +20,7 @@ const CatalogueContextProvider = (props) => {
       ...prev,
       [itemId]: prev[itemId] + 1,
     }));
+    
   };
 
   // Remove from cart functionality
