@@ -4,6 +4,7 @@ import { CatalogueContext } from '../Context/Catalogue'
 import Items from '../Components/Items/Items'
 import catalog_banner from "../Components/Assets/catalog.jpeg";
 import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer';
 
 const Catalogue = (props) => {
   const {allProduct} = useContext(CatalogueContext);
@@ -27,6 +28,7 @@ const Catalogue = (props) => {
           })}
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

@@ -10,7 +10,7 @@ const ProductDisplay = ({ product }) => {
       <div className="productdisplay-left">
         {/* Dynamic Image List */}
         <div className="productdisplay-img-list">
-          {Array(4) // Assuming 4 thumbnails for demonstration
+          {Array(4) 
             .fill(product.image)
             .map((img, index) => (
               <img key={index} src={img} alt={`${product.name} thumbnail ${index + 1}`} />

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import picture from '../Components/Assets/IMG_20231126_230344_151.jpg'
+import Footer from '../Components/Footer/Footer';
 
 const AboutUs = () => {
   return (
@@ -101,6 +102,7 @@ const AboutUs = () => {
       </div>
     </div>
   </section>
+  <Footer/>
 </div>
 
   );

@@ -5,6 +5,7 @@ import Offers from '../Components/Offers/Offers'
 import NewCollections from '../Components/NewCollections/NewCollections'
 import Newsletter from '../Components/Newsletter/Newsletter'
 import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Offers/>
       <NewCollections/>
       <Newsletter/>
+      <Footer/>
     </div>
   )
 }
