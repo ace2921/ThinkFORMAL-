@@ -47,6 +47,7 @@ const CartItems = () => {
           </div>
         </div>
       )}
+      
     </div>
   );
 };

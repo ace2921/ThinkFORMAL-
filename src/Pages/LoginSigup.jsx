@@ -24,8 +24,8 @@ const LoginSignup = () => {
     }
 
     try {
-      const response = await fetch('http://34.235.149.135:5000/signup', {
-        method: 'POST',
+      const response = await fetch('http://52.90.48.52:5000/users', {
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
